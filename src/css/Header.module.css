@@ -61,7 +61,11 @@ header {
     justify-content: center;
     align-items: center;
   }
+  .logo {
+    margin: 0 auto;
+  }
   .linkContainer a {
     font-size: 1em;
+    margin: 0;
   }
 }

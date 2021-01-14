@@ -82,7 +82,7 @@
 /* Desktops and laptops ----------- */
 @media only screen and (max-width: 1024px) {
   .container {
-    height: 40vh;
+    height: 50vh;
   }
 }
 
@@ -91,9 +91,10 @@
   .container {
     text-align: center;
     margin-top: 3rem;
+    height: 70vh;
   }
 
   .cta {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 }
