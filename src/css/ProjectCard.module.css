@@ -1,0 +1,91 @@
+.cardContainer {
+  position: relative;
+  overflow: hidden;
+  width: 20%;
+  height: 20vh;
+  margin: 4rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 22px;
+  background-image: linear-gradient(to bottom right, #c1a5e5, #fff);
+  transition: 0.2s;
+
+  animation: slide 1s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 05;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #c1a5e5;
+}
+
+.projectImg {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  opacity: 1;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.projectHeader {
+  transform: translateY(100%);
+  color: #000;
+  transition: 0.3s;
+}
+
+.projectDescription {
+  transform: translateY(100%);
+  color: #000;
+  transition: 0.3s;
+}
+
+.cardContainer:hover {
+  border: 3px solid #c1a5e5;
+}
+
+.cardContainer:hover .projectImg {
+  opacity: 0.2;
+  transform: translateX(-10px) scale(0.95);
+  filter: blur(2px);
+}
+
+.cardContainer:hover .projectHeader {
+  transform: translateY(0);
+}
+
+.cardContainer:hover .projectDescription {
+  transform: translateY(0);
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (max-width: 1024px) {
+  .cardContainer {
+    width: 50%;
+    height: 20vh;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width: 376px) {
+  .cardContainer {
+    width: 100%;
+    height: 20vh;
+  }
+}

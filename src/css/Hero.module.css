@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.headerText {
+  font-size: 4em;
+  animation: slide 1s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.subText {
+  margin-top: 3rem;
+  font-size: 1.5em;
+  font-weight: lighter;
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.avatar {
+  margin-top: 3rem;
+  border: 5px solid #c1a5e5;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  animation: fade 1s ease-in-out;
+}
+
+.avatar:hover {
+  transform: scale(1);
+  filter: brightness(80%);
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.cta {
+  margin-top: 2rem;
+  text-align: center;
+  color: #c1a5e5;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (max-width: 1024px) {
+  .container {
+    height: 40vh;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width: 376px) {
+  .container {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta {
+    margin-top: 4rem;
+  }
+}

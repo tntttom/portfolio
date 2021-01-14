@@ -1,0 +1,33 @@
+.projects {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+.header {
+  margin-top: 10rem;
+  font-size: 3em;
+}
+
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (max-width: 1024px) {
+  .projects {
+    margin-top: 5rem;
+    height: 100%;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (max-width: 376px) {
+  .projects {
+    width: 100%;
+  }
+}
