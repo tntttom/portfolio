@@ -18,6 +18,7 @@ header {
   padding: 1rem;
   margin: 0 1rem;
   cursor: pointer;
+  color: #000;
   border: 3px solid transparent;
   transition: 0.2s;
   -webkit-touch-callout: none; /* iOS Safari */
