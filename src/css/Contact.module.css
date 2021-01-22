@@ -56,7 +56,7 @@
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 400px) {
   .contact {
     height: 100vh;
   }

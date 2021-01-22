@@ -87,7 +87,7 @@
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 400px) {
   .container {
     text-align: center;
     margin-top: 3rem;
