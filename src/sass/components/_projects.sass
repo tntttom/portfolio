@@ -1,0 +1,105 @@
+.projects
+    margin-top: 160px
+    padding: 50px 0
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    .header-container
+        .header-eyebrow
+            width: 50%
+            height: 5px
+            background: $pink
+            transition: 1s
+            @include max(991px)
+                margin-bottom: 10px
+        .header
+            margin-bottom: 20px
+            width: auto
+            font-size: 48px
+            font-family: $nunito
+            letter-spacing: 1.5px
+            color: $white
+            @include max(991px)
+                font-size: 36px
+                margin-bottom: 10px
+    .project-container
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        @include max(768px)
+            align-items: center
+            justify-content: center
+        .card-container
+            opacity: 1
+            background-color: #171726
+            width: 30%
+            margin: 30px 0
+            transition: 1s
+            animation: slide 1s ease-in-out
+            box-shadow: 0px 4px 20px #000
+            overflow: hidden
+            @include max(991px)
+                width: 45%
+            @include max(768px)
+                width: 315px
+            @include max(575px)
+                width: 100%
+            .project-img-container
+                position: relative
+                .project-img
+                    width: 100%
+                    opacity: 1
+                    transition: 0.2s
+                    z-index: 1
+                    object-fit: cover
+                .project-img-overlay
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: calc(100% - 3px)
+                    background: linear-gradient(to right bottom, rgba(0, 0 ,0 ,0) 10%, rgba(107, 107, 153, 0.9) 100% )
+            .project-info
+                height: 220px
+                padding: 20px 40px
+                display: grid
+                grid-template-rows: repeat(3, auto)
+                @include max(1500px)
+                    height: 250px
+                @include max(1200px)
+                    padding: 15px 20px
+                .project-header
+                    font-family: $nunito
+                    font-size: 21px
+                    color: #8888e7
+                    margin-bottom: 10px
+                    height: auto
+                    @include max(575px)
+                        font-size: 24px
+                .project-description
+                    font-family: $roboto
+                    font-size: 16px
+                    color: $white
+                .link
+                    padding: 5px 25px
+                    border: 3px solid $pink
+                    background: transparent
+                    color: $pink
+                    font-size: 14px
+                    font-family: $opensans
+                    font-weight: 800
+                    letter-spacing: 1.3px
+                    text-transform: uppercase
+                    text-decoration: none
+                    align-self: end
+                    justify-self: start
+
+@keyframes slide
+    0%
+        opacity: 05
+
+    50%
+        opacity: 0
+
+    100%
+        opacity: 1

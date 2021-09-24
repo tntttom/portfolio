@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
+import useIntersection from "../hooks/useIntersection";
 
 import ProjectCard from "../components/ProjectCard";
 import projects from "../resources/data";
 
-import styles from "../css/Projects.module.css";
-
 export default () => {
   return (
-    <section id="projects" className={styles.projects}>
-      <h1 className={styles.header}>Projects</h1>
-      <div className={styles.projectContainer}>
+    <section id="projects" className="projects">
+      <div className="header-container">
+        <div className={`header-eyebrow`}></div>
+        <h3 className="header">Projects</h3>
+      </div>
+      <div className="project-container">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}

@@ -1,0 +1,165 @@
+header
+    position: relative
+    padding: 50px 0 30px
+    max-width: 1320px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include max(1500px)
+        max-width: 1040px
+    @include max(1200px)
+        max-width: 940px
+    @include max(991px)
+        max-width: 750px
+    @include max(768px)
+        max-width: 80%
+    .logo-container
+
+        .logo
+            font-family: $nunito
+            color: $pink
+            @include max(400px)
+                margin: 0 auto
+    .linkContainer
+        width: 500px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        opacity: 1
+        transition: 1s
+        @include max(991px)
+            width: 350px
+        @include max(768px)
+            flex-direction: column
+            justify-content: center
+            height: 70%
+            position: fixed
+            top: 0
+            left: 0
+            z-index: 1500
+            opacity: 0
+            width: 0
+            transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1)
+        a
+            text-align: center
+            width: 100%
+            font-family: $nunito
+            font-size: 18px
+            letter-spacing: 1.5px
+            font-weight: 700
+            text-decoration: none
+            padding: 8px 12px
+            cursor: pointer
+            color: $white
+            border: 3px solid transparent
+            transition: 0.2s
+            @include max(991px)
+                font-size: 14px
+                padding: 8px
+            @include max(768px)
+                border: none
+                color: $purple
+                font-size: 24px
+                margin: 50px 0
+                padding: 0
+            &:last-of-type
+                margin-right: 0
+            &:visited
+                color: $white
+                @include max(768px)
+                    color: $purple
+            &:hover
+                border: 3px solid $pink
+                color: $white
+                @include max(768px)
+                    color: $white
+                    border: none
+            &:active
+                border: 3px solid transparent
+                background-color: $pink
+                color: $white
+                @include max(768px)
+                    color: $purple
+                    border: none
+    .nav-checkbox
+        display: none
+        &:checked
+            ~ .nav-mobile-bg
+                transform: scale(90)
+            ~ .linkContainer
+                opacity: 1
+                width: 100%
+                a
+                    color: $purple
+                    width: 100%
+                    &:hover
+                        color: white
+            ~ .nav-button
+                background-color: $purple
+                .nav-icon, .nav-icon::before, .nav-icon::after
+                    background-color: $pink
+                .nav-icon
+                    background-color: transparent
+                .nav-icon::before
+                    top: 0
+                    transform: rotate(135deg)
+                .nav-icon::after
+                    top: 0
+                    transform: rotate(-135deg)
+    .nav-button
+        display: none
+        background-color: $pink
+        height: 40px
+        width: 40px
+        border-radius: 50%
+        position: fixed
+        top: 50px
+        right: 50px
+        z-index: 2000
+        text-align: center
+        cursor: pointer
+        transition: 0.2s
+        @include max(768px)
+            display: block
+        @include max(500px)
+            right: 30px
+        &:hover
+            transform: scale(1.11)
+            .nav-icon::before
+                top: -7px
+            .nav-icon::after
+                top: 7px
+        .nav-icon, .nav-icon::before, .nav-icon::after
+            position: relative
+            width: 20px
+            height: 2px
+            background-color: $purple
+            display: inline-block
+        .nav-icon
+            position: relative
+            margin-top: 20px
+            &::before, &::after
+                content: ""
+                position: absolute
+                left: 0
+                transition: all 0.2s
+            &::before
+                top: -5px
+            &::after
+                top: 5px
+    .nav-mobile-bg
+        display: none
+        height: 20px
+        width: 20px
+        border-radius: 50%
+        position: fixed
+        top: 60px
+        right: 60px
+        background: $pink
+        z-index: 1000
+        transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1)
+        @include max(768px)
+            display: block
+        @include max(500px)
+            right: 40px

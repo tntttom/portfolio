@@ -1,19 +1,20 @@
-import React from "react";
-
-import styles from "../css/ProjectCard.module.css";
+import React, { useEffect, useRef, useState } from "react";
 
 export default (props) => {
-  const stagger = 150;
   return (
-    <div
-      style={{ "animation-delay": `${props.index * stagger}ms` }}
-      className={styles.cardContainer}
-    >
-      <a className={styles.link} href={props.url} target="_blank">
-        <img className={styles.projectImg} src={props.imgUrl} />
-        <h1 className={styles.projectHeader}>{props.projectName}</h1>
-        <p className={styles.projectDescription}>{props.description}</p>
-      </a>
+    <div className={`card-container`}>
+      <div className="project-img-container">
+        <img className="project-img" src={props.imgUrl} />
+        <div className="project-img-overlay"></div>
+      </div>
+
+      <div className="project-info">
+        <h3 className="project-header">{props.projectName}</h3>
+        <p className="project-description">{props.description}</p>
+        <a className="link" href={props.url} target="_blank">
+          Site
+        </a>
+      </div>
     </div>
   );
 };

@@ -3,17 +3,21 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Tech from "./components/Tech";
 import Contact from "./components/Contact";
 
-import "./App.css";
+import "./sass/main.css";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <Projects />
-      <Contact />
+      <div className="container">
+        <Hero />
+        <Tech />
+        <Projects />
+        <Contact />
+      </div>
     </div>
   );
 }

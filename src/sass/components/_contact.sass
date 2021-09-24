@@ -1,0 +1,53 @@
+.contact
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    height: 40vh
+    margin: 250px 0
+    @include max(991px)
+        height: 50vh
+        margin: 150px 0
+    @include max(768px)
+        height: 65vh
+    .contact-header-container
+        .contact-header-eyebrow
+            width: 50%
+            height: 5px
+            background: $pink
+            transition: 1s
+        .header
+            margin-bottom: 20px
+            width: auto
+            font-size: 48px
+            letter-spacing: 1.5px
+            color: $white
+    ul
+        width: 100%
+        margin-top: 120px
+        display: flex
+        list-style-type: none
+        justify-content: center
+        align-items: center
+        @include max(1024px)
+            margin-top: 5rem
+        @include max(768px)
+            flex-direction: column
+        .listItem
+            margin: 0 3rem
+            border: 3px solid transparent
+            padding: 2rem
+            transition: 0.4s
+            @include max(768px)
+                margin: 10px 0
+            &:hover
+                border: 3px solid $pink
+                background-color: $pink
+                border-radius: 32px
+                a
+                    color: $white
+            a
+                text-decoration: none
+                color: $pink
+                cursor: pointer
+                font-weight: 700
+                transition: 0.2s
